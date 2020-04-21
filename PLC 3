@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<conio.h>
+#include<sys/time.h>
+#include<time.h>
+
+int main(void){
+
+    int staticIntArray[Array-Size];
+    int *ptrArray = new int[ARRAY-SIZE];
+
+    double timeIntTakes;
+
+    clock_t tStart = clock();
+    fillWithRandomNumbers (staticIntArray, ARRAY-SIZE);
+
+    double time = static_cast<double>(clock) - static_cast<double>(tStart)/static_cast<double>(CLOCKS_PER_SEC));
+    printf("Array on stack time is %.10f\n ", time);
+
+    clock_t tStart2 = clock();
+    fillWithRandomNumbers(ptrArray,ARRAY-SIZE);
+
+    double time2 = static_cast<double>(clock) - static_cast<double>(tStart2)/static_cast<double>(CLOCKS_PER_SEC));
+    printf("Array on stack time is %.10f\n ", time2);
+
+    getch();
+
+}
+void fillWithRandomNumbers(int IntArray[], int size){
+    for(int i =0; i<size ; i++)
+        IntArray[i] = rand();
+}
